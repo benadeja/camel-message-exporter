@@ -14,7 +14,7 @@ public class ReadMessagesRoute extends RouteBuilder {
 		
 		from("file:data/output?noop=true")
 		.log("Starting message routing")
-		.to("webspheremq:queue:JACO_MDI_PARKINGLOT_2")
+		.to("webspheremq:queue:JACO_MDI_PARKINGLOT_2?jmsMessageType=Text")
 		.log("Finished message routing");
 
 	}
